@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Socket System | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SmartSocket</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active" onclick="switchPage('dashboard', this)">
+                    <span class="nav-icon">📊</span> Dashboard
+                </li>
+                <li onclick="switchPage('students', this)">
+                    <span class="nav-icon">🎓</span> Students
+                </li>
+                <li onclick="switchPage('rooms', this)">
+                    <span class="nav-icon">🏠</span> Rooms
+                </li>
+                <li onclick="switchPage('sockets', this)">
+                    <span class="nav-icon">🔌</span> Sockets
+                </li>
+                <li onclick="switchPage('events', this)">
+                    <span class="nav-icon">📡</span> Power Events
+                </li>
+                <li onclick="switchPage('violations', this)">
+                    <span class="nav-icon">⚠️</span> Violations
+                </li>
+                <li onclick="switchPage('fines', this)">
+                    <span class="nav-icon">💸</span> Fines
+                </li>
+                <li onclick="switchPage('reports', this)">
+                    <span class="nav-icon">📄</span> Reports
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>v1.0.0 Stable</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <h1 id="page-title">Dashboard</h1>
+            <div class="user-profile">
+                <span>Warden Admin</span>
+                <div class="avatar">WA</div>
+            </div>
+        </header>
+
+        <section id="content-area" class="content-area">
+            <!-- Dynamic content injected here -->
+            <div class="loading">Loading dashboard...</div>
+        </section>
+    </main>
+</div>
+
+<!-- Modal for adding/editing data (optional but cleaner) -->
+<div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 id="modal-title">Add New</h2>
+            <button onclick="closeModal()" class="close-btn">&times;</button>
+        </div>
+        <div id="modal-body" class="modal-body">
+            <!-- Form injected here -->
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
